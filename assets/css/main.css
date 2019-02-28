@@ -1,9 +1,10 @@
 #uptownname {
   position: absolute;
   top: 440px;
-  left: 45.5%;
+  left: 46.2%;
   font-size: xx-large;
   color: pink;
+  font-family: "Anton", sans-serif;
 }
 
 #uptown {
@@ -16,9 +17,10 @@
 #midtownname {
   position: absolute;
   bottom: 50px;
-  left: 45%;
+  left: 46%;
   font-size: xx-large;
   color: pink;
+  font-family: "Anton", sans-serif;
 }
 
 #midtown {
@@ -30,9 +32,10 @@
 #downtownname {
   position: absolute;
   bottom: -70px;
-  left: 44.5%;
+  left: 45%;
   font-size: xx-large;
   color: pink;
+  font-family: "Anton", sans-serif;
 }
 
 #downtown {
@@ -44,11 +47,18 @@
 h1 {
   text-align: center;
   color: pink;
-  font-family: monospace;
+  font-family: "Anton", sans-serif;
+  text-decoration: underline;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: medium;
 }
 
 a:hover {
-  background-color: pink;
+  background-color: white;
 }
 
 body {
@@ -76,26 +86,20 @@ p {
 
 .button3 {
   background-color: #008cba;
-  position: relative;
-  float: right;
+
   margin: 10px;
   color: pink;
 }
 
 .button4 {
   background-color: #008cba;
-  position: relative;
-  top: 400px;
   margin: 10px;
   color: pink;
 }
 
 .button5 {
   background-color: #008cba;
-  position: relative;
-  float: right;
-  top: 400px;
-  left: 250px;
+
   margin: 10px;
   color: pink;
 }

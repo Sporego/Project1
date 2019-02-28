@@ -13,13 +13,11 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-
     <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      href="https://fonts.googleapis.com/css?family=Anton"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
 
   <body>
@@ -61,8 +59,8 @@
     </div>
 
     <button class="button button2">Upper Manhattan</button>
-    <button class="button button2">UWS</button>
-    <button class="button button2">UES</button>
+    <button class="button button2">Upper West Side</button>
+    <button class="button button2">Upper East Side</button>
 
     <button class="button button3">Midtown West</button>
     <button class="button button3">Midtown East</button>
@@ -76,7 +74,7 @@
     <button class="button button4">East Village</button>
     <button class="button button4">Lower East Side</button>
     <button class="button button4">Soho</button>
-
+    <br />
     <button class="button button5">Nolita</button>
     <button class="button button5">Tribeca</button>
     <button class="button button5">ChinaTown</button>
@@ -100,4 +98,32 @@
       crossorigin="anonymous"
     ></script>
   </body>
+
+  <script>
+    $(document).ready(function() {
+      $(".button2").hide();
+      $(".button3").hide();
+      $(".button4").hide();
+      $(".button5").hide();
+    });
+
+    $("#uptownname").on("click", function() {
+      $("#uptown").hide();
+      $("#uptownname").hide();
+      $(".button2").show();
+    });
+
+    $("#midtownname").on("click", function() {
+      $("#midtown").hide();
+      $("#midtownname").hide();
+      $(".button3").show();
+    });
+
+    $("#downtownname").on("click", function() {
+      $("#downtown").hide();
+      $("#downtownname").hide();
+      $(".button4").show();
+      $(".button5").show();
+    });
+  </script>
 </html>
