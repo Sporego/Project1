@@ -73,7 +73,9 @@ h1 {
 #downtown {
     width: 12%;
     height: 12%;
-    #login {
-        height: 90%;
-        width: 90%;
-    }
+}
+
+#login {
+    height: 90%;
+    width: 90%;
+}
