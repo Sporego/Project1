@@ -1,0 +1,30 @@
+body {
+    background: url("../images/background1.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+header {
+    height: 20vh;
+}
+
+main {
+    height: 60vh;
+}
+
+footer {
+    height: 20vh;
+    color: white;
+    opacity: 0.7;
+}
+
+h1 {
+    font-size: 72px;
+    margin-top: 100px;
+    opacity: 0.7;
+}
+
+#start {
+    margin-top: 50px;
+    opacity: 0.7;
+}
