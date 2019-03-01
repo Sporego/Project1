@@ -37,6 +37,8 @@ footer {
   background-size: cover;
   color: white;
   padding-top: 70px;
+  color: white;
+  opacity: 0.7;
 }
 
 h1 {
@@ -69,4 +71,7 @@ h1 {
 #downtown {
   width: 12%;
   height: 12%;
+#login {
+  height: 90%;
+  width: 90%;
 }
