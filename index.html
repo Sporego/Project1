@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Base Layout</title>
-
+    <title>New York Bucket List</title>
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -13,73 +12,60 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Anton"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
   <body>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Explore New York City</h1>
+    <header></header>
+    <main>
+      <h1>Welcome to New York</h1>
+      <!-- Modal! Login -->
+      <button
+        id="start"
+        type="button"
+        class="btn btn-dark"
+        data-toggle="modal"
+        data-target=".bd-example-modal-lg"
+      >
+        Start exploring
+      </button>
 
-        <p class="lead">Choose Your area:</p>
+      <div
+        class="modal fade bd-example-modal-lg"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <!--  -->
+            <form action="/action_page.php">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" />
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" /> Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-dark">Create Account</button>
+              |
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+            <!--  -->
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <img
-        id="uptown"
-        src="assets/Images/Uptown.png"
-        alt="uptown"
-        width="10%"
-      />
-      <h2 id="uptownname"><a>Uptown</a></h2>
-    </div>
-
-    <div>
-      <img
-        id="midtown"
-        src="assets/Images/Midtown.png"
-        alt="midtown"
-        width="10%"
-      />
-      <h2 id="midtownname"><a>Midtown</a></h2>
-    </div>
-
-    <div>
-      <img
-        id="downtown"
-        src="assets/Images/Downtown.png"
-        alt="downtown"
-        width="10%"
-      />
-      <h2 id="downtownname"><a>Downtown</a></h2>
-    </div>
-
-    <button class="button button2">Upper Manhattan</button>
-    <button class="button button2">Upper West Side</button>
-    <button class="button button2">Upper East Side</button>
-
-    <button class="button button3">Midtown West</button>
-    <button class="button button3">Midtown East</button>
-    <button class="button button3">Chelsea</button>
-    <br />
-    <button class="button button3">Murray Hill</button>
-    <button class="button button3">Flat Iron</button>
-    <button class="button button3">Gramercy</button>
-
-    <button class="button button4">West Village</button>
-    <button class="button button4">East Village</button>
-    <button class="button button4">Lower East Side</button>
-    <button class="button button4">Soho</button>
-    <br />
-    <button class="button button5">Nolita</button>
-    <button class="button button5">Tribeca</button>
-    <button class="button button5">ChinaTown</button>
-    <button class="button button5">FinDis</button>
-
+    </main>
+    <footer>
+      copyright &copy; 2019
+    </footer>
+    <!--JavaScript-->
+    <script src="assets/js/main.js"></script>
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"

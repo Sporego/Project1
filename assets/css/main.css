@@ -1,105 +1,81 @@
-#uptownname {
-  position: absolute;
-  top: 440px;
-  left: 46.2%;
-  font-size: xx-large;
-  color: #ffd3f8;
-  font-family: "Anton", sans-serif;
-}
-
-#uptown {
+body {
+  background: url("../images/background1.jpg");
+  background-size: cover;
   text-align: center;
-  position: absolute;
-  top: 38%;
-  left: 45%;
+  margin: auto;
 }
 
-#midtownname {
-  position: absolute;
-  bottom: 50px;
-  left: 46%;
-  font-size: xx-large;
-  color: #ffd3f8;
-  font-family: "Anton", sans-serif;
+#body {
+  background: white;
 }
 
-#midtown {
-  position: absolute;
-  bottom: 0px;
-  left: 45%;
+header {
+  height: 20vh;
 }
 
-#downtownname {
-  position: absolute;
-  bottom: -70px;
-  left: 45%;
-  font-size: xx-large;
-  color: #ffd3f8;
-  font-family: "Anton", sans-serif;
+.header {
+  background: url("../images/header_top.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-#downtown {
-  position: absolute;
-  bottom: -130px;
-  left: 45.5%;
+main {
+  height: 60vh;
+}
+
+.main {
+  height: 80%;
+}
+
+footer {
+  height: 20vh;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.footer {
+  background: url("../images/footer_bottom.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: 70px;
 }
 
 h1 {
-  text-align: center;
-  color: #ffd3f8;
-  font-family: "Anton", sans-serif;
-  text-decoration: underline;
+  font-size: 72px;
+  margin-top: 100px;
+  opacity: 0.7;
 }
 
-h2 {
-  color: white;
-  text-align: center;
-  font-size: medium;
+#welcome {
+  padding-top: 10px;
+  margin-top: 0;
 }
 
-a:hover {
-  background-color: white;
+#start {
+  margin-top: 50px;
+  opacity: 0.7;
 }
 
-body {
-  background-image: url("/Users/Ericdahan/Desktop/Project1/assets/Images/NYC.png");
-  background-size: auto;
+.content {
+  padding: 16px;
 }
 
-.jumbotron {
-  background-image: url("/Users/Ericdahan/Desktop/Project1/assets/Images/york.jpeg");
-  color: #ffd3f8;
-  background-position: center;
-  background-size: 100%;
+#uptown {
+  width: 12%;
+  height: 12%;
 }
 
-p {
-  text-align: center;
-  color: white;
+#midtown {
+  width: 12%;
+  height: 12%;
 }
 
-.button2 {
-  background-color: #008cba;
-  margin: 10px;
-  color: white;
+#downtown {
+  width: 12%;
+  height: 12%;
 }
 
-.button3 {
-  background-color: #008cba;
-
-  margin: 10px;
-  color: white;
-}
-
-.button4 {
-  background-color: #008cba;
-  margin: 10px;
-  color: white;
-}
-
-.button5 {
-  background-color: #008cba;
-
-  margin: 10px;
-  color: white;
+#login {
+  height: 90%;
+  width: 90%;
 }
