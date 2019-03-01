@@ -3,7 +3,7 @@
   top: 440px;
   left: 46.2%;
   font-size: xx-large;
-  color: pink;
+  color: #ffd3f8;
   font-family: "Anton", sans-serif;
 }
 
@@ -19,7 +19,7 @@
   bottom: 50px;
   left: 46%;
   font-size: xx-large;
-  color: pink;
+  color: #ffd3f8;
   font-family: "Anton", sans-serif;
 }
 
@@ -34,7 +34,7 @@
   bottom: -70px;
   left: 45%;
   font-size: xx-large;
-  color: pink;
+  color: #ffd3f8;
   font-family: "Anton", sans-serif;
 }
 
@@ -46,7 +46,7 @@
 
 h1 {
   text-align: center;
-  color: pink;
+  color: #ffd3f8;
   font-family: "Anton", sans-serif;
   text-decoration: underline;
 }
@@ -67,39 +67,39 @@ body {
 }
 
 .jumbotron {
-  background-image: url("/Users/Ericdahan/Desktop/Project1/assets/Images/View-Of-New-York-Brooklyn-Bridge-Nighht-Big-Bus-Tours.jpg");
-  color: white;
+  background-image: url("/Users/Ericdahan/Desktop/Project1/assets/Images/york.jpeg");
+  color: #ffd3f8;
   background-position: center;
   background-size: 100%;
 }
 
 p {
   text-align: center;
-  color: pink;
+  color: white;
 }
 
 .button2 {
   background-color: #008cba;
   margin: 10px;
-  color: pink;
+  color: white;
 }
 
 .button3 {
   background-color: #008cba;
 
   margin: 10px;
-  color: pink;
+  color: white;
 }
 
 .button4 {
   background-color: #008cba;
   margin: 10px;
-  color: pink;
+  color: white;
 }
 
 .button5 {
   background-color: #008cba;
 
   margin: 10px;
-  color: pink;
+  color: white;
 }
