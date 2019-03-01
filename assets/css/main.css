@@ -56,6 +56,26 @@ h1 {
     opacity: 0.7;
 }
 
+.btn {
+    opacity: 0.7;
+}
+
+.modal-content {
+    background: #191e1a;
+    color: #fff;
+    text-align: left;
+    height: 300px;
+    padding: 15px;
+}
+
+.padding {
+    margin: 5px;
+}
+
+#email, #pwd {
+    background: #efe3e5;
+}
+
 .content {
     padding: 16px;
 }
@@ -72,7 +92,7 @@ h1 {
 
 #downtown {
     width: 12%;
-  height: 12%;
+    height: 12%;
 }
 
 #login {
