@@ -7,7 +7,7 @@ body {
 }
 
 #body {
-  background: white;
+  background: #3d4046;
 }
 
 header {
@@ -40,12 +40,11 @@ footer {
   background-size: cover;
   padding-top: 70px;
   opacity: 1;
-
 }
 
 h1 {
   font-size: 72px;
-  margin-top: 100px;
+  padding-top: 100px;
   opacity: 0.7;
 }
 
@@ -69,18 +68,24 @@ h1 {
   text-align: left;
   height: 300px;
   padding: 15px;
-
 }
+
 .size {
-  height: 500px;
-
+  height: 80%;
+  width: 60%;
+  margin: auto;
 }
+
+#create {
+  margin: auto;
+  width: 20%;
+}
+
 .padding {
   margin: 5px;
 }
 
-#email,
-#pwd {
+#email, #pwd {
   background: #efe3e5;
 }
 
@@ -109,8 +114,8 @@ h1 {
 }
 
 .form {
-  padding: 20px;}
-
+  padding: 20px;
+}
 
 #weather {
   width: 15%;
