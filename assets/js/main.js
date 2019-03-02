@@ -37,3 +37,11 @@ $.ajax({
   }
   $("#weather").append(temperatureAndCity);
 });
+
+function signInExistingUser() {}
+
+function signUpNewUser() {}
+
+function continueAsGuest() {}
+
+function logout() {}
