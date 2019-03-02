@@ -5,35 +5,28 @@ body {
   margin: auto;
   font-family: "Julius Sans One", sans-serif;
 }
-
 #body {
   background: #3d4046;
 }
-
 header {
   height: 20vh;
 }
-
 .header {
   background: url("../images/header_top.jpg");
   background-position: center;
   background-size: cover;
 }
-
 main {
   height: 60vh;
 }
-
 .main {
   height: 80%;
 }
-
 footer {
   height: 20vh;
   color: #fff;
   opacity: 0.7;
 }
-
 .footer {
   background: url("../images/footer_bottom.jpg");
   background-position: center;
@@ -41,35 +34,28 @@ footer {
   padding-top: 70px;
   opacity: 1;
 }
-
 h1 {
   font-size: 72px;
   padding-top: 100px;
   opacity: 0.7;
 }
-
 #welcome {
   padding-top: 10px;
   margin-top: 0;
 }
-
 #start {
   margin-top: 50px;
   opacity: 0.7;
 }
-
 .btn {
   opacity: 0.7;
 }
-
 .modal-content {
   background: #191e1a;
   color: #fff;
   text-align: left;
   height: 300px;
   padding: 15px;
-}
-
 .size {
   height: 80%;
   width: 60%;
@@ -85,38 +71,42 @@ h1 {
   margin: 5px;
 }
 
-#email, #pwd {
+#email,
+#pwd {
+
   background: #efe3e5;
 }
-
 .content {
   padding: 16px;
 }
-
 #uptown {
   width: 12%;
   height: 12%;
 }
-
 #midtown {
   width: 12%;
   height: 12%;
 }
-
 #downtown {
   width: 12%;
   height: 12%;
 }
-
 #login {
   height: 90%;
   width: 90%;
 }
+button {
+  margin: 10px;
+}
+.top-buttons {
+  margin-top: 100px;
+}
 
 .form {
   padding: 20px;
-}
 
+  height: 100%;
+}
 #weather {
   width: 15%;
   height: 10%;
@@ -126,11 +116,9 @@ h1 {
   top: 6%;
   margin-right: 1%;
 }
-
 .displayTemp {
   font-size: 16px;
 }
-
 .overflow {
   overflow: hidden;
 }
