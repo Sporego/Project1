@@ -77,6 +77,10 @@ h1 {
   margin: auto;
 }
 
+.news {
+  color: #fff;
+}
+
 #create {
   margin: auto;
   width: 20%;
@@ -126,6 +130,28 @@ button {
   padding: 20px;
   height: 80%;
 }
+
+.card-body {
+  background: #2a2e32;
+}
+
+.card {
+  background: #2a2e32;
+  margin-bottom: 20px;
+}
+
+.btn-news {
+  width: 70%;
+  height: 30%;
+  font-size: 12px;
+}
+
+.news {
+  max-height: calc(100vh - 9rem);
+  overflow-y: auto;
+}
+
+.sideNews {}
 
 #weather {
   width: 15%;
