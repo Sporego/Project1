@@ -1,101 +1,107 @@
 body {
-    background: url("../images/background1.jpg");
-    background-size: cover;
-    text-align: center;
-    margin: auto;
+  background: url("../images/background1.jpg");
+  background-size: cover;
+  text-align: center;
+  margin: auto;
 }
 
 #body {
-    background: white;
+  background: white;
 }
 
 header {
-    height: 20vh;
+  height: 20vh;
 }
 
 .header {
-    background: url("../images/header_top.jpg");
-    background-position: center;
-    background-size: cover;
+  background: url("../images/header_top.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 main {
-    height: 60vh;
+  height: 60vh;
 }
 
 .main {
-    height: 80%;
+  height: 80%;
 }
 
 footer {
-    height: 20vh;
-    color: #fff;
-    opacity: 0.7;
+  height: 20vh;
+  color: #fff;
+  opacity: 0.7;
 }
 
 .footer {
-    background: url("../images/footer_bottom.jpg");
-    background-position: center;
-    background-size: cover;
-    padding-top: 70px;
+  background: url("../images/footer_bottom.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: 70px;
 }
 
 h1 {
-    font-size: 72px;
-    margin-top: 100px;
-    opacity: 0.7;
+  font-size: 72px;
+  margin-top: 100px;
+  opacity: 0.7;
 }
 
 #welcome {
-    padding-top: 10px;
-    margin-top: 0;
+  padding-top: 10px;
+  margin-top: 0;
 }
 
 #start {
-    margin-top: 50px;
-    opacity: 0.7;
+  margin-top: 50px;
+  opacity: 0.7;
 }
 
 .btn {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .modal-content {
-    background: #191e1a;
-    color: #fff;
-    text-align: left;
-    height: 300px;
-    padding: 15px;
+  background: #191e1a;
+  color: #fff;
+  text-align: left;
+  height: 300px;
+  padding: 15px;
 }
-
+.size {
+  height: 500px;
+}
 .padding {
-    margin: 5px;
+  margin: 5px;
 }
 
-#email, #pwd {
-    background: #efe3e5;
+#email,
+#pwd {
+  background: #efe3e5;
 }
 
 .content {
-    padding: 16px;
+  padding: 16px;
 }
 
 #uptown {
-    width: 12%;
-    height: 12%;
+  width: 12%;
+  height: 12%;
 }
 
 #midtown {
-    width: 12%;
-    height: 12%;
+  width: 12%;
+  height: 12%;
 }
 
 #downtown {
-    width: 12%;
-    height: 12%;
+  width: 12%;
+  height: 12%;
 }
 
 #login {
-    height: 90%;
-    width: 90%;
+  height: 90%;
+  width: 90%;
+}
+.form {
+  padding: 20px;
 }
