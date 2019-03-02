@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>New York Bucket List</title>
+    <title>Registration</title>
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -13,14 +13,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Julius+Sans+One"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body id="body">
-    <header class="header">
-      <h1 id="welcome">Welcome to New York</h1>
-    </header>
-    <main class="">
-      <form class="form modal-content size">
+  <body class="overflow">
+    <header></header>
+
+    <main>
+      <h1>Welcome to New York</h1>
+      <form class="form modal-content size ">
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input
@@ -58,22 +62,28 @@
           />
         </div>
 
+        <button type="submit" class="btn btn-dark" id="create">Create</button>
+
         <a type="submit" href="map.html" class="btn btn-dark">
           Create Account
         </a>
       </form>
+
+      <aside id="weather" class="btn btn-dark"></aside>
     </main>
-    <footer class="footer">
+
+    <footer>
       copyright &copy; 2019
     </footer>
-    <!--JavaScript-->
-    <script src="assets/js/main.js"></script>
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+    <!--JavaScript-->
+    <script src="assets/js/main.js"></script>
+
     <!-- Bootstrap -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

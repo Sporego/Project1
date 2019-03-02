@@ -6,7 +6,7 @@ body {
   font-family: "Julius Sans One", sans-serif;
 }
 #body {
-  background: white;
+  background: #3d4046;
 }
 header {
   height: 20vh;
@@ -36,7 +36,7 @@ footer {
 }
 h1 {
   font-size: 72px;
-  margin-top: 100px;
+  padding-top: 100px;
   opacity: 0.7;
 }
 #welcome {
@@ -56,12 +56,24 @@ h1 {
   text-align: left;
   height: 300px;
   padding: 15px;
+.size {
+  height: 80%;
+  width: 60%;
+  margin: auto;
 }
+
+#create {
+  margin: auto;
+  width: 20%;
+}
+
 .padding {
   margin: 5px;
 }
+
 #email,
 #pwd {
+
   background: #efe3e5;
 }
 .content {
@@ -92,6 +104,7 @@ button {
 
 .form {
   padding: 20px;
+
   height: 100%;
 }
 #weather {
