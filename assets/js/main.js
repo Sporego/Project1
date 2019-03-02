@@ -5,7 +5,6 @@ let backgroundArray = [
   "../images/background4.jpg"
 ];
 let city = "New York";
-
 let APIkeyWeather = "70c19500496f9aecbd97ff861d3072ee";
 let queryURLWeather =
   "https://api.openweathermap.org/data/2.5/weather?q=" +
