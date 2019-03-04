@@ -231,6 +231,14 @@ button {
   margin: 10px;
 }
 
+.left {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
 .dark {
   background: #3d4046;
 }
@@ -238,6 +246,7 @@ button {
 #copyright {
   font-size: 12px;
   margin: 10px;
+  text-align: center;
 }
 
 .img-horizontal {
