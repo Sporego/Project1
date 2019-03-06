@@ -15,9 +15,21 @@ header {
 }
 
 .header {
-  background: url("../images/header_top.jpg");
+  /* background: url("../images/header_top.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  height: 30vh;
+}
+
+#canvas-image-blending {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 30vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 main {
@@ -97,24 +109,16 @@ h1 {
 
 #uptown,
 #downtown {
-<<<<<<< HEAD
-  height: 70%;
-  width: 30%;
-=======
+
   height: 40%;
   width: 15%;
->>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
   margin-left: 30px;
 }
 
 #midtown {
-<<<<<<< HEAD
-  height: 40%;
-  width: 30%;
-=======
+
   height: 20%;
   width: 15%;
->>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
   margin-left: 30px;
 }
 
@@ -152,11 +156,7 @@ h1 {
   margin: 5px;
 }
 
-#email,
-#pwd,
-#exampleInputEmail1,
-#exampleInputPassword1,
-#exampleInputPassword1 {
+#email, #pwd, #exampleInputEmail1, #exampleInputPassword1, #exampleInputPassword1 {
   background: white;
 }
 
@@ -280,11 +280,9 @@ p {
   display: flex;
   flex-flow: row wrap;
   margin: 5px;
-}
-<<<<<<< HEAD
+  }
 
 .images {
   font-size: 13px;
 }
-=======
->>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
+
