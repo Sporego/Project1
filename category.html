@@ -20,39 +20,60 @@
   </head>
   <body id="body">
     <header class="header">
-      <h1 id="welcome">Welcome to New York</h1>
+      <h1 id="welcome">The NYC Phucket List</h1>
     </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="./index.html">New York Bucket List</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="./map.html">About <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Places</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./bucket-list.html">My Bucket List</a>
-        </li>
-      </ul>
-     <button class="btn btn-dark log-out">Log Out</button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="./index.html">New York</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./map.html"
+              >About <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Places</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./bucket-list.html">Phucket Profile</a>
+          </li>
+        </ul>
+        <button class="btn btn-dark log-out">Log Out</button>
+      </div>
+    </nav>
 
     <main class="main">
       <div class="container">
         <div class="row">
           <div class="col-lg-9">
-            <div class="row top-buttons">
+            <div class="row">
               <!-------Buttons/Category-->
-              <div class="col-lg-3 ">
+              <div class="col-lg-12"><div class="results"></div></div>
+              s
+              <div class="col-lg-12">
+                <h3>Choose your location:</h3>
+                <div><img id="uptown" src="assets/images/uptown.png" /></div>
+                <div><img id="midtown" src="assets/images/midtown.png" /></div>
+                <div>
+                  <img id="downtown" src="assets/images/downtown.png" />
+                </div>
+                <h3 id="category-text">Choose your Category:</h3>
+              </div>
+
+              <div class="col-lg-3">
                 <div class="dropdown">
                   <button
                     class="btn btn-dark dropdown-toggle"
@@ -68,9 +89,9 @@
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <a class="dropdown-item" href="#">Bars</a>
-                    <a class="dropdown-item" href="#">Coffee</a>
-                    <a class="dropdown-item" href="#">Rooftops</a>
+                    <a class="dropdown-item" id="bars" href="#">Bars</a>
+                    <a class="dropdown-item" id="coffee" href="#">Coffee</a>
+                    <a class="dropdown-item" id="rooftop" href="#">Rooftops</a>
                   </div>
                 </div>
               </div>
@@ -90,10 +111,16 @@
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <a class="dropdown-item" href="#">Restaurants</a>
-                    <a class="dropdown-item" href="#">Bakeries/Deserts</a>
-                    <a class="dropdown-item" href="#">Brunch</a>
-                    <a class="dropdown-item" href="#">Fast Food</a>
+                    <a class="dropdown-item" id="restaurants" href="#"
+                      >Restaurants</a
+                    >
+                    <a class="dropdown-item" id="desserts" href="#"
+                      >Bakeries/Desserts</a
+                    >
+                    <a class="dropdown-item" id="brunch" href="#">Brunch</a>
+                    <a class="dropdown-item" id="fastfood" href="#"
+                      >Fast Food</a
+                    >
                   </div>
                 </div>
               </div>
@@ -118,15 +145,17 @@
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <a class="dropdown-item" href="#">Concerts</a>
-                    <a class="dropdown-item" href="#">Broadway</a>
-                    <a class="dropdown-item" href="#">Sports</a>
-                    <a class="dropdown-item" href="#">Entertainment</a>
+                    <a class="dropdown-item" id="concerts" href="#">Concerts</a>
+                    <a class="dropdown-item" id="broadway" href="#">Broadway</a>
+                    <a class="dropdown-item" id="sports" href="#">Sports</a>
+                    <a class="dropdown-item" id="entertainment" href="#"
+                      >Entertainment</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row bottom-buttons">
+            <div class="row">
               <div class="col-lg-3">
                 <button id="shopping" type="button" class="btn btn-dark">
                   Shopping
@@ -157,49 +186,91 @@
           </div>
         </div>
       </div>
-      
-      <!----Results Div------------------------------------------>
 
-      
-      <div class="row">
-          <div class="col-lg-12"></div>
-          <div class="results"></div>
+      <!----Results Div------------------------------------------>
     </main>
     <aside id="weather" class="btn btn-dark"></aside>
-
 
     <footer class="footer">
       <h6>Developed by:</h6>
       <div class=" flex-wrap">
-        <div class="developed">Emma Bixler
-          <a href="https://www.linkedin.com/in/emma-bixler-73a91b92/"><img src="./assets/images/linkedIn.png" alt="Linked In" class="icon"></a>
-          <a href="https://github.com/emmabixler"><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"></a>
+        <div class="developed">
+          Emma Bixler
+          <br />
+          Front-End Developer
+          <a href="https://www.linkedin.com/in/emma-bixler-73a91b92/"
+            ><img
+              src="./assets/images/linkedIn.png"
+              alt="Linked In"
+              class="icon"
+          /></a>
+          <a href="https://github.com/emmabixler"
+            ><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"
+          /></a>
         </div>
-        <div class="developed">Eric Dahan
-          <a href="https://www.linkedin.com/in/eric-dahan-965176a6/"><img src="./assets/images/linkedIn.png" alt="Linked In"
-              class="icon"></a>
-          <a href="#"><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"></a>
-          </div>
-        <div class="developed">Filbert Shi
-          <a href="https://www.linkedin.com/in/filbert-shi-9a6259178/"><img src="./assets/images/linkedIn.png" alt="Linked In"
-              class="icon"></a>
-          <a href="https://github.com/Sporego"><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"></a>
+        <div class="developed">
+          Eric Dahan
+          <br />
+          Front-End Developer
+          <a href="https://www.linkedin.com/in/eric-dahan-965176a6/"
+            ><img
+              src="./assets/images/linkedIn.png"
+              alt="Linked In"
+              class="icon"
+          /></a>
+
+          <a href="https://github.com/ericdahan8">
+            <img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"
+          /></a>
         </div>
-        <div class="developed">Olha Melska
-          <a href="https://www.linkedin.com/in/olha-melska-685553158/"><img src="./assets/images/linkedIn.png" alt="Linked In"
-              class="icon"></a>
-          <a href="https://github.com/OlyaMelska"><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"></a>
+        <div class="developed">
+          Filbert Shi
+          <br />
+          Back-End Developer
+          <a href="https://www.linkedin.com/in/filbert-shi-9a6259178/"
+            ><img
+              src="./assets/images/linkedIn.png"
+              alt="Linked In"
+              class="icon"
+          /></a>
+
+          <a href="https://github.com/Sporego"
+            ><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"
+          /></a>
         </div>
-        <div class="developed">Rahul Vig
-          <a href="https://www.linkedin.com/in/rahul-vig-21a459168/"><img src="./assets/images/linkedIn.png" alt="Linked In"
-              class="icon"></a>
-          <a href="https://github.com/Rahul-Vig"><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"></a>
+        <div class="developed">
+          Olha Melska
+          <br />
+          Back-End Developer
+          <a href="https://www.linkedin.com/in/olha-melska-685553158/"
+            ><img
+              src="./assets/images/linkedIn.png"
+              alt="Linked In"
+              class="icon"
+          /></a>
+
+          <a href="https://github.com/OlyaMelska"
+            ><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"
+          /></a>
+        </div>
+        <div class="developed">
+          Rahul Vig
+          <br />
+          Back-End Developer
+          <a href="https://www.linkedin.com/in/rahul-vig-21a459168/"
+            ><img
+              src="./assets/images/linkedIn.png"
+              alt="Linked In"
+              class="icon"
+          /></a>
+
+          <a href="https://github.com/Rahul-Vig"
+            ><img src="./assets/images/gitHub.png" alt="Git Hub" class="icon"
+          /></a>
         </div>
       </div>
       <p id="copyright">copyright &copy; 2019</p>
     </footer>
-
-
 
     <!-- jQuery -->
     <script
