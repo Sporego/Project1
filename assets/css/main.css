@@ -41,6 +41,7 @@ footer {
 
 .container {
   width: 100%;
+  background: lightgray;
   padding: 0;
   padding-left: 10px;
   padding-right: 10px;
