@@ -1,3 +1,7 @@
+$(".results").hide();
+$("#category-text").hide();
+$(".btn").hide();
+
 let backgroundArray = [
   "../images/background1.jpg",
   "../images/background2.jpg",
@@ -83,3 +87,58 @@ function signUpNewUser() {}
 function continueAsGuest() {}
 
 function logout() {}
+
+//using yelp places api
+
+// var settings = {
+//   async: true,
+//   crossDomain: true,
+//   url:
+//     "https://api.yelp.com/v3/businesses/search?text=coffee&latitude=37.786882&longitude=-122.399972",
+//   method: "GET",
+//   headers: {
+//     Authorization:
+//       "Bearer " +
+//       "RNPYUywdhji7tjfiGm8Nnm1WTnygxsgP-gwpmQhU8z0ljE3VJ7U0FBQr9Xc9aXSiEGEv4GGfgztkei29cQqxZZ92ToYR6PTCUhRRCh9ZsT0vt-Vf93qIwNpUXft-XHYx"
+//   }
+// };
+
+// $.ajax(settings).done(function(response) {
+//   console.log(response);
+// });
+
+$("#uptown").on("click", function() {
+  $(".btn").show();
+  $("#uptown").hide();
+});
+
+// var myurl =
+// "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&location=midtown-nyc";
+
+// $.ajax({
+// url: myurl,
+// headers: {
+//   Authorization:
+//     "Bearer RNPYUywdhji7tjfiGm8Nnm1WTnygxsgP-gwpmQhU8z0ljE3VJ7U0FBQr9Xc9aXSiEGEv4GGfgztkei29cQqxZZ92ToYR6PTCUhRRCh9ZsT0vt-Vf93qIwNpUXft-XHYx"
+// },
+// method: "GET",
+// dataType: "json",
+// success: function(data) {
+//   console.log(data.businesses);
+//   $(".results").empty();
+//   for (var i = 0; i < 12; i++) {
+//     var imgDiv = $("<div>");
+//     imgDiv.addClass("images");
+//     var img = $("<img>");
+//     img.attr("src", data.businesses[i].image_url);
+//     img.attr("alt", "food places");
+//     img.css("width", "200px");
+//     img.css("height", "200px");
+//     img.css("padding", "10px");
+//     imgDiv.append(img);
+//     imgDiv.append("<br>");
+//     imgDiv.append(data.businesses[i].name);
+//     $(".results").append(imgDiv);
+//   }
+// }
+// });
