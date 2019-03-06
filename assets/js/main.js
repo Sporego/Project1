@@ -1,7 +1,14 @@
 $(".results").hide();
 $("#category-text").hide();
+
+$(".btn-c").hide();
+$(".dd").hide();
+
 $(".btn").hide();
+
 AOS.init();
+
+
 let city = "New York";
 let satrtDate;
 let endDate;
@@ -101,6 +108,120 @@ function logout() {}
 //   console.log(response);
 // });
 
+
+var loc;
+
+$("#uptown").on("click", function() {
+  $(".btn-c").show();
+  $(".dd").show();
+  $("#location").text("Uptown");
+  $("#category-text").show();
+  $("#uptown").hide();
+  $("#downtown").show();
+  $("#midtown").show();
+  loc = "uptown";
+});
+
+$("#midtown").on("click", function() {
+  $(".btn-c").show();
+  $(".dd").show();
+  $("#location").text("Midtown");
+  $("#category-text").show();
+  $("#uptown").show();
+  $("#downtown").show();
+  $("#midtown").hide();
+  loc = "midtown";
+});
+
+$("#downtown").on("click", function() {
+  $(".btn-c").show();
+  $(".dd").show();
+  $("#location").text("Downtown");
+  $("#category-text").show();
+  $("#uptown").show();
+  $("#downtown").hide();
+  $("#midtown").show();
+  loc = "downtown";
+});
+
+$(".btn-c").on("click", function() {
+  console.log($(this).text());
+  $(".results").show();
+  var myurl =
+    "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" +
+    $(this).text() +
+    "&location=" +
+    loc +
+    "-nyc";
+
+  $.ajax({
+    url: myurl,
+    headers: {
+      Authorization:
+        "Bearer RNPYUywdhji7tjfiGm8Nnm1WTnygxsgP-gwpmQhU8z0ljE3VJ7U0FBQr9Xc9aXSiEGEv4GGfgztkei29cQqxZZ92ToYR6PTCUhRRCh9ZsT0vt-Vf93qIwNpUXft-XHYx"
+    },
+    method: "GET",
+    dataType: "json",
+    success: function(data) {
+      console.log(data.businesses);
+      $(".results").empty();
+      for (var i = 0; i < 12; i++) {
+        var imgDiv = $("<div>");
+        imgDiv.addClass("images");
+        var img = $("<img>");
+        img.attr("src", data.businesses[i].image_url);
+        img.attr("alt", "food places");
+        img.css("width", "250px");
+        img.css("height", "250px");
+        img.css("padding", "10px");
+        imgDiv.append(img);
+        imgDiv.append("<br>");
+        imgDiv.append(data.businesses[i].name);
+        $(".results").append(imgDiv);
+      }
+    }
+  });
+});
+
+$(".dropdown-item").on("click", function() {
+  console.log($(this).text());
+  $(".results").show();
+  var myurl =
+    "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" +
+    $(this).text() +
+    "&location=" +
+    loc +
+    "-nyc";
+
+  $.ajax({
+    url: myurl,
+    headers: {
+      Authorization:
+        "Bearer RNPYUywdhji7tjfiGm8Nnm1WTnygxsgP-gwpmQhU8z0ljE3VJ7U0FBQr9Xc9aXSiEGEv4GGfgztkei29cQqxZZ92ToYR6PTCUhRRCh9ZsT0vt-Vf93qIwNpUXft-XHYx"
+    },
+    method: "GET",
+    dataType: "json",
+    success: function(data) {
+      console.log(data.businesses);
+      $(".results").empty();
+      for (var i = 0; i < 12; i++) {
+        var imgDiv = $("<div>");
+        imgDiv.addClass("images");
+        var img = $("<img>");
+        img.attr("src", data.businesses[i].image_url);
+        img.attr("alt", "food places");
+        img.css("width", "250px");
+        img.css("height", "250px");
+        img.css("padding", "10px");
+        imgDiv.append(img);
+        imgDiv.append("<br>");
+        imgDiv.append(data.businesses[i].name);
+        $(".results").append(imgDiv);
+      }
+    }
+  });
+});
+=======
 $("#uptown").on("click", function() {
   $(".btn").show();
   $("#uptown").hide();
@@ -137,6 +258,7 @@ $("#uptown").on("click", function() {
 // }
 // });
 
+
 let granimInstance = new Granim({
   element: "#canvas-image-blending",
   direction: "top-bottom",
@@ -160,3 +282,4 @@ let granimInstance = new Granim({
   }
 });
 granimInstance.play();
+
