@@ -1,13 +1,7 @@
 $(".results").hide();
 $("#category-text").hide();
 $(".btn").hide();
-
-let backgroundArray = [
-  "../images/background1.jpg",
-  "../images/background2.jpg",
-  "../images/background3.jpg",
-  "../images/background4.jpg"
-];
+AOS.init();
 let city = "New York";
 let satrtDate;
 let endDate;
@@ -142,3 +136,27 @@ $("#uptown").on("click", function() {
 //   }
 // }
 // });
+
+let granimInstance = new Granim({
+  element: "#canvas-image-blending",
+  direction: "top-bottom",
+  isPausedWhenNotInView: true,
+  image: {
+    source: "./assets/images/header_top.jpg",
+    position: ["center", "top"],
+    stretchMode: ["stretch-if-bigger", "stretch-if-bigger"],
+    blendingMode: "multiply"
+  },
+  states: {
+    "default-state": {
+      gradients: [
+        ["#29323c", "#485563"],
+        ["#FF6B6B", "#556270"],
+        ["#c9eafb", "#7ea0c4"],
+        ["#f0ab51", "#eceba3"]
+      ],
+      transitionSpeed: 10000
+    }
+  }
+});
+granimInstance.play();

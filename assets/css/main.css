@@ -15,9 +15,21 @@ header {
 }
 
 .header {
-  background: url("../images/header_top.jpg");
+  /* background: url("../images/header_top.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  height: 30vh;
+}
+
+#canvas-image-blending {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 30vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 main {
@@ -95,8 +107,7 @@ h1 {
   opacity: 0.7;
 }
 
-#uptown,
-#downtown {
+#uptown, #downtown {
   height: 40%;
   width: 15%;
   margin-left: 30px;
@@ -142,11 +153,7 @@ h1 {
   margin: 5px;
 }
 
-#email,
-#pwd,
-#exampleInputEmail1,
-#exampleInputPassword1,
-#exampleInputPassword1 {
+#email, #pwd, #exampleInputEmail1, #exampleInputPassword1, #exampleInputPassword1 {
   background: white;
 }
 
