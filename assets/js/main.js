@@ -1,7 +1,11 @@
 $(".results").hide();
 $("#category-text").hide();
+<<<<<<< HEAD
 $(".btn-c").hide();
 $(".dd").hide();
+=======
+$(".btn").hide();
+>>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
 
 let backgroundArray = [
   "../images/background1.jpg",
@@ -108,6 +112,7 @@ function logout() {}
 //   console.log(response);
 // });
 
+<<<<<<< HEAD
 var loc;
 
 $("#uptown").on("click", function() {
@@ -220,3 +225,40 @@ $(".dropdown-item").on("click", function() {
     }
   });
 });
+=======
+$("#uptown").on("click", function() {
+  $(".btn").show();
+  $("#uptown").hide();
+});
+
+// var myurl =
+// "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&location=midtown-nyc";
+
+// $.ajax({
+// url: myurl,
+// headers: {
+//   Authorization:
+//     "Bearer RNPYUywdhji7tjfiGm8Nnm1WTnygxsgP-gwpmQhU8z0ljE3VJ7U0FBQr9Xc9aXSiEGEv4GGfgztkei29cQqxZZ92ToYR6PTCUhRRCh9ZsT0vt-Vf93qIwNpUXft-XHYx"
+// },
+// method: "GET",
+// dataType: "json",
+// success: function(data) {
+//   console.log(data.businesses);
+//   $(".results").empty();
+//   for (var i = 0; i < 12; i++) {
+//     var imgDiv = $("<div>");
+//     imgDiv.addClass("images");
+//     var img = $("<img>");
+//     img.attr("src", data.businesses[i].image_url);
+//     img.attr("alt", "food places");
+//     img.css("width", "200px");
+//     img.css("height", "200px");
+//     img.css("padding", "10px");
+//     imgDiv.append(img);
+//     imgDiv.append("<br>");
+//     imgDiv.append(data.businesses[i].name);
+//     $(".results").append(imgDiv);
+//   }
+// }
+// });
+>>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
