@@ -17,10 +17,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   </head>
   <body id="body">
     <header class="header">
-      <h1 id="welcome">The Phucket List</h1>
+      <h1 id="welcome">The New York BappleList</h1>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -48,7 +50,7 @@
             <a class="nav-link" href="./category.html">Places</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Phucket List</a>
+            <a class="nav-link" id="bapple-link" href="#">BappleList</a>
           </li>
         </ul>
         <button class="btn btn-dark log-out">Log Out</button>
@@ -59,7 +61,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9">
-            <h2>The Phucket List</h2>
+            <h2>The BappleList</h2>
+            <div id="placesList"></div>
           </div>
 
           <div class="col-lg-3">
@@ -174,5 +177,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/bucketlist.js"></script>
   </body>
 </html>

@@ -1,11 +1,7 @@
 $(".results").hide();
 $("#category-text").hide();
-<<<<<<< HEAD
 $(".btn-c").hide();
 $(".dd").hide();
-=======
-$(".btn").hide();
->>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
 
 let backgroundArray = [
   "../images/background1.jpg",
@@ -74,7 +70,7 @@ $.ajax({
   for (let i = 0; i < response.weather.length; i++) {
     arr.push(response.weather[i].icon);
   }
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < 1; i++) {
     let imgWeather = $("<img>").attr(
       "src",
       "http://openweathermap.org/img/w/" + arr[i] + ".png"
@@ -112,7 +108,6 @@ function logout() {}
 //   console.log(response);
 // });
 
-<<<<<<< HEAD
 var loc;
 
 $("#uptown").on("click", function() {
@@ -174,6 +169,7 @@ $(".btn-c").on("click", function() {
         imgDiv.addClass("images");
         var img = $("<img>");
         img.attr("src", data.businesses[i].image_url);
+
         img.attr("alt", "food places");
         img.css("width", "250px");
         img.css("height", "250px");
@@ -181,6 +177,18 @@ $(".btn-c").on("click", function() {
         imgDiv.append(img);
         imgDiv.append("<br>");
         imgDiv.append(data.businesses[i].name);
+        imgDiv.append(
+          "<br>" +
+            data.businesses[i].location.display_address[0] +
+            "," +
+            data.businesses[i].location.display_address[1]
+        );
+        imgDiv.append("<br>Call: " + data.businesses[i].phone);
+        imgDiv.append("<br>Rating: " + data.businesses[i].rating + "/5");
+
+        imgDiv.append(
+          "<br><button class='btn-sm btn-dark bucketBtn'> Add to List </button>"
+        );
         $(".results").append(imgDiv);
       }
     }
@@ -220,45 +228,162 @@ $(".dropdown-item").on("click", function() {
         imgDiv.append(img);
         imgDiv.append("<br>");
         imgDiv.append(data.businesses[i].name);
+        imgDiv.append(
+          "<br>" +
+            data.businesses[i].location.display_address[0] +
+            "," +
+            data.businesses[i].location.display_address[1]
+        );
+        imgDiv.append("<br>Call: " + data.businesses[i].phone);
+        imgDiv.append("<br>Rating: " + data.businesses[i].rating + "/5");
+        imgDiv.append(
+          "<br><button class='btn-sm btn-dark bucketBtn'> Add to List </button>"
+        );
         $(".results").append(imgDiv);
       }
     }
   });
 });
-=======
-$("#uptown").on("click", function() {
-  $(".btn").show();
-  $("#uptown").hide();
+
+var config = {
+  apiKey: "AIzaSyCt0RVdwv3EYrk6siOMoFZMTRCcZA5sEgo",
+  authDomain: "explore-nyc-49c6b.firebaseapp.com",
+  databaseURL: "https://explore-nyc-49c6b.firebaseio.com",
+  projectId: "explore-nyc-49c6b",
+  storageBucket: "explore-nyc-49c6b.appspot.com",
+  messagingSenderId: "991663963314"
+};
+
+firebase.initializeApp(config);
+
+var database = firebase.database();
+var userRef;
+
+var currentUser;
+var email;
+var setPass;
+var checkPass;
+function validateExistingUser() {}
+
+function signInExistingUser() {}
+
+function signUpNewUser() {
+  currentUser = $("#nameC").val();
+  email = $("#emailC").val();
+  setPass = $("#passC").val();
+  checkPass = $("#re-entered-pass").val();
+}
+
+$("#create").on("click", function() {
+  signUpNewUser();
+  if (
+    currentUser === "" ||
+    email === "" ||
+    setPass === "" ||
+    checkPass === ""
+  ) {
+    swal("All Fields Must Be Filled");
+    return false;
+  }
+  if (setPass != checkPass) {
+    swal("Passwords do not match");
+    setPass = "";
+    checkPass = "";
+    $("#passC").val(setPass);
+    $("#re-entered-pass").val(checkPass);
+    return false;
+  } else {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, setPass)
+      .then(function(response) {
+        console.log(response);
+        database
+          .ref("/users")
+          .push({
+            name: currentUser,
+            email: email
+          })
+          .then(function(response) {
+            console.log(response.path.pieces_[1]);
+            localStorage.setItem("userId", response.path.pieces_[1]);
+          });
+
+        window.location.href = "about.html";
+      })
+      .catch(function(error) {
+        // Handle Errors here.
+        console.log("Error");
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log("Account created");
+      });
+  }
 });
 
-// var myurl =
-// "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&location=midtown-nyc";
+$("#existingUser").on("click", function() {});
 
-// $.ajax({
-// url: myurl,
-// headers: {
-//   Authorization:
-//     "Bearer RNPYUywdhji7tjfiGm8Nnm1WTnygxsgP-gwpmQhU8z0ljE3VJ7U0FBQr9Xc9aXSiEGEv4GGfgztkei29cQqxZZ92ToYR6PTCUhRRCh9ZsT0vt-Vf93qIwNpUXft-XHYx"
-// },
-// method: "GET",
-// dataType: "json",
-// success: function(data) {
-//   console.log(data.businesses);
-//   $(".results").empty();
-//   for (var i = 0; i < 12; i++) {
-//     var imgDiv = $("<div>");
-//     imgDiv.addClass("images");
-//     var img = $("<img>");
-//     img.attr("src", data.businesses[i].image_url);
-//     img.attr("alt", "food places");
-//     img.css("width", "200px");
-//     img.css("height", "200px");
-//     img.css("padding", "10px");
-//     imgDiv.append(img);
-//     imgDiv.append("<br>");
-//     imgDiv.append(data.businesses[i].name);
-//     $(".results").append(imgDiv);
-//   }
-// }
-// });
->>>>>>> 17c96ac1bc20aaf86fb92b2bac89d214f25a4f21
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    database
+      .ref("/users/" + firebase.auth().currentUser.uid + "/bucketList")
+      .on("child_added", function(snapshot) {
+        console.log("here in update:");
+        console.log(snapshot.val().place);
+        var div = $("<div class='col-lg-9' </div>");
+        div.append(snapshot.val().place);
+        $("#placesList").append(div);
+        $("#placesList")
+          .find("button")
+          .remove();
+      });
+  } else {
+  }
+});
+
+// function bucketBtnClick() {}
+
+$(document).on("click", ".bucketBtn", function(event) {
+  var element = $(event.target).parent()[0].innerHTML;
+
+  database
+    .ref("/users/" + firebase.auth().currentUser.uid + "/bucketList")
+    .push({
+      place: element
+    });
+});
+
+$("#existingUser").on("click", function() {
+  var loginEmail = $("#loginEmail").val();
+  var loginPass = $("#loginPassword").val();
+
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(loginEmail, loginPass)
+    .then(function() {
+      // $("#existingUser").attr("href", "about.html");
+      window.location.href = "about.html";
+    })
+    .catch(function(error) {
+      swal("error");
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+      swal("Error: " + errorMessage);
+      return false;
+    });
+});
+
+function logout() {
+  firebase
+    .auth()
+    .signOut()
+    .then(function() {
+      swal("Logged out");
+      window.location.href = "index.html";
+    })
+    .catch(function(error) {
+      //error
+    });
+}

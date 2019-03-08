@@ -18,10 +18,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   </head>
   <body id="body">
     <header class="header">
-      <h1 id="welcome">Welcome to New York</h1>
+      <h1 id="welcome">Welcome to the New York BappleList</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <a class="navbar-brand" href="./index.html">New York</a>
@@ -48,10 +50,12 @@
             <a class="nav-link" href="./category.html">Places</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./bucket-list.html">Phucket Profile</a>
+            <a class="nav-link" id="bapple-link" href="./bucket-list.html"
+              >BappleList</a
+            >
           </li>
         </ul>
-        <button class="btn btn-dark log-out">Log Out</button>
+        <button onclick="logout()" class="btn btn-dark log-out">Log Out</button>
       </div>
     </nav>
 
@@ -61,9 +65,9 @@
       <div class="container dark white">
         <div class="row padding">
           <div class="col-lg-12">
-            <h2 id="h2">New York Phucket List</h2>
+            <h2 id="h2">The New York Bapple List</h2>
             <p style="text-align: Center;">
-              Because Phucket. We are bored of boredom.
+              Boredom's got a new best friend.
             </p>
           </div>
         </div>
@@ -73,13 +77,14 @@
             <p>
               Do you live in New York City? Have you ever been bored? So have
               we. Having nothing to do is now in the past. With our unique NYC
-              Phucket List we bring you the most intircate and well renowed
-              places to see in the city. Ranging from Food & Nightlife to Arts
-              and Scenery. Just hit the Places tab above, Choose your location
-              and what your in the mood for. Then Let us do the rest. select
-              from places you may or may not have heard of. Save the spots.
-              Construct your days. Build Your Phucket List. Your days, your
-              nights and your future, is in your hands.
+              BappleList we bring you the most intircate and well renowed places
+              to see in the city. Ranging from Food & Nightlife to Arts and
+              Scenery. Just hit the Places tab above, Choose your location and
+              what your in the mood for. Then Let us do the rest. We find the
+              best spots from updown to downtown manhattan. All you need to do
+              is get up and go. select from places you may or may not have heard
+              of. Save the spots. Construct your days. Build Your BappleList.
+              Your days, your nights and your future, is in your hands.
             </p>
           </div>
           <div class="col-lg-8">
@@ -240,22 +245,14 @@
         <div class="row padding">
           <div class="col-lg-12">
             <h2>Here you'll find everything you need to see in NYC</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Laudantium esse ipsum ducimus placeat aliquam iusto eligendi
-              distinctio dolores at voluptate sint fugiat ullam natus culpa
-              consectetur, ex iure. Autem, dolorum. Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Cumque deserunt magnam consectetur
-              dolorum tempora aspernatur ducimus fugit soluta error sequi
-              commodi, quis corrupti voluptate quaerat quam quae repellat enim
-              assumenda? Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Excepturi eaque aliquam est consequatur nam porro ea nobis
-              recusandae dicta praesentium ratione soluta consequuntur, quaerat
-              natus laudantium doloremque necessitatibus vitae tempore. Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Quam officiis
-              facilis, cupiditate hic et at minima? Repudiandae, laudantium quam
-              quasi magni eius quo accusantium iure, vel aut illum officia
-              impedit?
+            <p style="text-align:center">
+              In the city that never sleeps, New York is known for the bright
+              lights, action, fantastic shows, incredible restaurants and so
+              much more. Known for the bustling and shuffling of the people of
+              Times Square to the greenery and acres of Central Park. It is the
+              place where if you can make it here you can make it anywhere. It
+              is the most populated city (illegally), you can always find
+              something to do in one of the 5 boroughs.
             </p>
           </div>
         </div>
